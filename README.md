@@ -4,18 +4,18 @@
 
 <h4 class="resaltado_inline" style="text-align: center;">¿Qué te pedimos que hagas?</h4>
 <p>La tarea va a consistir en modelar el movimiento de una dama por el tablero de dicho juego. <strong>Para controlar la posición en de la dama en las casillas del tablero, se utilizarán las coordenadas que vienen dadas en el tablero de ajedrez, por una fila (del "1" al "8") y una columna (de la "a" a la "h").</strong></p>
-<div style="font-size: xx-small;" align="center"><img src="resources/jugar-02.png" width="222" height="222" alt="Tablero Damas" /><img src="resources/jugar-03.png" width="222" height="222" alt="Movimiento Damas" /><br />
+<div style="font-size: xx-small;" align="center"><img src="src/main/resources/jugar-02.png" width="222" height="222" alt="Tablero Damas" /><img src="src/main/resources/jugar-03.png" width="222" height="222" alt="Movimiento Damas" /><br />
 <p style="font-size: xx-small;"><span>Imágenes obtenidas de la web: <a href="https://www.hagaloustedmismo.cl/proyectos/como-hacer-y-jugar-un-juego-de-damas.html" target="_blank" rel="noopener">www.hagaloustedmismo.cl</a><br /></span></p>
 </div>
 <p>En la primera imagen puedes observar cuál es el posicionamiento inicial válido para las damas dependiendo de su color. En la segunda imagen puedes apreciar cuáles son <strong>los movimientos válidos para una dama, siempre hacia adelante, en diagonal y solamente una casilla</strong>.</p>
 <p>Deberás controlar que el movimiento de una dama se realice correctamente siguiendo las reglas descritas anteriormente y además no estará permitido realizar movimientos que puedan sacar a la pieza fuera del tablero.</p>
 <p>Además, <strong>la dama adquiere unos movimientos especiales cuando consigue llegar el extremo contrario del tablero. </strong>En ese momento, la dama puede moverse hacia adelante y hacia atrás en el tablero, siempre en diagonal y todas las casillas que desee, siempre y cuando no se salga del tablero.</p>
-<div style="font-size: xx-small;" align="center"><img src="resources/jugar-05-A.png" width="222" height="222" alt="Dama" /><img src="resources/jugar-05-C.png" width="222" height="222" alt="Movimiento Dama" /><br />
+<div style="font-size: xx-small;" align="center"><img src="src/main/resources/jugar-05-A.png" width="222" height="222" alt="Dama" /><img src="src/main/resources/jugar-05-C.png" width="222" height="222" alt="Movimiento Dama" /><br />
 <p style="font-size: xx-small;"><span>Imágenes obtenidas de la web: <a href="https://www.hagaloustedmismo.cl/proyectos/como-hacer-y-jugar-un-juego-de-damas.html" target="_blank" rel="noopener">www.hagaloustedmismo.cl</a><br /></span></p>
 </div>
 <p>He subido a GitHub un esqueleto de proyecto gradle que ya lleva incluidos todos los test necesarios que el programa debe pasar y las dependencias, entre ellas la de la librería <code>Entrada</code>. La <abbr title="Uniform Resource Locator">URL</abbr> del repositorio es la siguiente: <a href="https://github.com/jma982/Damas" title="Acceder al repositorio GitHub con el esqueleto de la aplicación (Se abre en una nueva ventana)." target="_blank" rel="noopener">repositorio GitHub con el esqueleto del proyecto</a>.</p>
 <p>Además, te pongo un diagrama de clases para ayudarte y poco a poco te iré explicando los diferentes pasos a seguir:</p>
-<p><img src="resources/Prueba.png" width="756" height="617" alt="Diagrama de clases" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="src/main/resources/DiagramaClases.png" width="756" height="617" alt="Diagrama de clases" style="display: block; margin-left: auto; margin-right: auto;" /></p>
 <p><strong class="resaltado_inline">Primeros Pasos</strong></p>
 <ol class=" auto-numbered" style="list-style-type: decimal;">
 <li>Lo primero que debes hacer es un <code><strong>fork</strong></code> del repositorio donde he colocado el esqueleto de este proyecto.</li>
