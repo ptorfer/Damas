@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación atributo cadenaAMostrar">
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación constructor Color">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Color.java" afterDir="false" />
     </list>
@@ -134,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730324106296</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Creación constructor Color">
+      <option name="closed" value="true" />
+      <created>1730324209919</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730324209919</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +152,7 @@
     <MESSAGE value="Creato toString()" />
     <MESSAGE value="Creación enum color" />
     <MESSAGE value="Creación atributo cadenaAMostrar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación atributo cadenaAMostrar" />
+    <MESSAGE value="Creación constructor Color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación constructor Color" />
   </component>
 </project>
