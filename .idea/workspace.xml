@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Atributo creado String CadenaAMostrar">
-      <change beforePath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Direccion.java" afterDir="false" />
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación atributo cadenaAMostrar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/org.iesandalus.programacion.damas/Color.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,12 +102,48 @@
       <option name="project" value="LOCAL" />
       <updated>1730322834575</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creación constructor Direccion">
+      <option name="closed" value="true" />
+      <created>1730323189182</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730323189182</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Creato toString()">
+      <option name="closed" value="true" />
+      <created>1730323391233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730323391233</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Creación enum color">
+      <option name="closed" value="true" />
+      <created>1730323972389</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730323972389</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creación atributo cadenaAMostrar">
+      <option name="closed" value="true" />
+      <created>1730324106296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730324106296</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="enum creado" />
     <MESSAGE value="Atributo creado String CadenaAMostrar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atributo creado String CadenaAMostrar" />
+    <MESSAGE value="Creación constructor Direccion" />
+    <MESSAGE value="Creato toString()" />
+    <MESSAGE value="Creación enum color" />
+    <MESSAGE value="Creación atributo cadenaAMostrar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación atributo cadenaAMostrar" />
   </component>
 </project>
