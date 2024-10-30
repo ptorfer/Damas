@@ -43,4 +43,8 @@ public class Posicion {
             throw new IllegalArgumentException("ERROR: Columna no válida.");
         }
     }
+
+    public char getColumna (){
+        return columna;
+    }
 }
