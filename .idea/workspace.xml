@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Actualización">
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación constructor Posicion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Posicion.java" afterDir="false" />
     </list>
@@ -189,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730325702358</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Creación constructor Posicion">
+      <option name="closed" value="true" />
+      <created>1730327812532</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730327812532</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Creación constructor Posicion">
+      <option name="closed" value="true" />
+      <created>1730327827297</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730327827297</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -203,6 +219,7 @@
     <MESSAGE value="Creación toString" />
     <MESSAGE value="Creación de atributos" />
     <MESSAGE value="Actualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
+    <MESSAGE value="Creación constructor Posicion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación constructor Posicion" />
   </component>
 </project>
