@@ -47,4 +47,18 @@ public class Posicion {
     public char getColumna (){
         return columna;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fila, columna);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Posicion posicion2)) return false;
+        return fila == posicion2.fila && columna == posicion2.columna;
+    }
+
+
 }

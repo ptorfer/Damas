@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación de métodos set y get">
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación método get">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Posicion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730330157059</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Creación método get">
+      <option name="closed" value="true" />
+      <created>1730330373392</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730330373392</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,6 +237,7 @@
     <MESSAGE value="Actualización" />
     <MESSAGE value="Creación constructor Posicion" />
     <MESSAGE value="Creación de métodos set y get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de métodos set y get" />
+    <MESSAGE value="Creación método get" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación método get" />
   </component>
 </project>
