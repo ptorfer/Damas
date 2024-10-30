@@ -1,4 +1,4 @@
-package org.iesandalus.programacion.damas;
+package org.iesandalus.programacion.damas.modelo;
 
 public enum Color {
     BLANCO ("Blanco"),
