@@ -6,7 +6,13 @@ public enum Direccion {
     SUROESTE ("Suroeste"),
     NOROESTE ("Noroeste");
 
-    private String CadenaAMostrar;
+    private String cadenaAMostrar;
+
+    private Direccion (String cadenaAMostrar){
+        this.cadenaAMostrar = cadenaAMostrar;
+    }
+
+
 
 
 }
