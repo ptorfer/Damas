@@ -59,6 +59,4 @@ public class Posicion {
         if (!(o instanceof Posicion posicion2)) return false;
         return fila == posicion2.fila && columna == posicion2.columna;
     }
-
-
 }
