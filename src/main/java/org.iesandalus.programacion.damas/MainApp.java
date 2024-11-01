@@ -10,6 +10,7 @@ import org.iesandalus.programacion.damas.modelo.Dama;
 import org.iesandalus.programacion.damas.modelo.Direccion;
 
 import javax.naming.OperationNotSupportedException;
+import java.util.Objects;
 
 public class MainApp {
 
@@ -61,8 +62,12 @@ public class MainApp {
     }
 
     private void mostrarDama(){
+
+        Objects.requireNonNull(dama,"La dama no ha sido creada.");
         System.out.println(dama.toString());
     }
+
+
 
 
 
