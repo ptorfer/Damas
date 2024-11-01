@@ -53,7 +53,13 @@ public class Consola {
     }
 
     public static int elegirPasos(){
-
+        int pasosElegidos;
+        do{
+            System.out.println("Introduzca un número de casillas mayor o igual a 1.");
+            pasosElegidos= Entrada.entero();
+        }
+        while (!(pasosElegidos>=1));
+        return  pasosElegidos;
     }
 
     public static Direccion elegirDireccion(){
