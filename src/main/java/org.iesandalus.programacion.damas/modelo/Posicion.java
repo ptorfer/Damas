@@ -2,7 +2,6 @@ package org.iesandalus.programacion.damas.modelo;
 
 import java.util.Objects;
 
-
 public class Posicion {
 
     //Atributos
