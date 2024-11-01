@@ -2,6 +2,7 @@ package org.iesandalus.programacion.damas;
 
 import org.iesalandalus.programacion.utilidades.Entrada;
 import org.iesandalus.programacion.damas.modelo.Color;
+import org.iesandalus.programacion.damas.modelo.Direccion;
 
 public class Consola {
 
@@ -49,5 +50,39 @@ public class Consola {
         System.out.println("2. Sureste.");
         System.out.println("3. Suroeste.");
         System.out.println("4. Noroeste.");
+    }
+
+    public static int elegirPasos(){
+
+    }
+
+    public static Direccion elegirDireccion(){
+        int d;
+        Direccion direccionElegido=Direccion.NORESTE;
+        do{
+            System.out.println("Introduzca una direccion: 1.Noreste \n2.Sureste \n3.Suroeste \n4.Noroeste");
+            d=Entrada.entero();
+        }
+        while (!(d>=1 && d<=4));
+
+        switch (d){
+            case 1:
+                direccionElegido= Direccion.NORESTE;
+                break;
+
+            case 2:
+                direccionElegido= Direccion.SURESTE;
+                break;
+
+            case 3:
+                direccionElegido= Direccion.SUROESTE;
+                break;
+
+            case 4:
+                direccionElegido= Direccion.NOROESTE;
+                break;
+            default: ;
+        }
+        return direccionElegido;
     }
 }
