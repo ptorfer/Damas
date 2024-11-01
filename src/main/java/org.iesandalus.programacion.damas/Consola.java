@@ -31,7 +31,7 @@ public class Consola {
         int color;
         Color colorElegido=Color.BLANCO;
         do{
-            System.out.println("Introduzca un color: 1.Blanco o 2.Negro");
+            System.out.println("Introduzca un color: \n1.Blanco\2.Negro");
             color=Entrada.entero();
         }
         while (color!=1 && color!=2);
