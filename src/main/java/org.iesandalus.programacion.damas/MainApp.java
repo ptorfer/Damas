@@ -13,6 +13,7 @@ import javax.naming.OperationNotSupportedException;
 
 public class MainApp {
 
+
     //Atributo de clase
     private static Dama dama;
 
@@ -29,10 +30,15 @@ public class MainApp {
     }
 
     private void crearDamaColor(){
-        Consola.elegirColor();
+
+        //Atributos:
         Color color;
-        color=Consola.elegirColor();
-        dama=new Dama(color);
+
+        //Llamada a métodos y creación de objeto
+
+        Consola.elegirColor();
+        color = Consola.elegirColor();
+        dama = new Dama(color);
     }
 
     private void mover(){
@@ -41,12 +47,12 @@ public class MainApp {
         Direccion direccion;
         int pasos;
 
-        //Llamada a métodos
+        //Llamada a métodos y creación de objeto
         try{
-        Consola.mostrarMenuDirecciones();
-        direccion=Consola.elegirDireccion();
-        pasos=Consola.elegirPasos();
-        dama.mover(direccion, pasos);
+            Consola.mostrarMenuDirecciones();
+            direccion=Consola.elegirDireccion();
+            pasos=Consola.elegirPasos();
+            dama.mover(direccion, pasos);
         }
         catch (OperationNotSupportedException e)
         {
