@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación método mover">
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Creación método toString">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/Consola.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Dama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Dama.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730490829072</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Creación método toString">
+      <option name="closed" value="true" />
+      <created>1730491705254</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730491705254</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -333,6 +341,7 @@
     <MESSAGE value="Actualización" />
     <MESSAGE value="Creación constructor defecto y con parámetro." />
     <MESSAGE value="Creación método mover" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación método mover" />
+    <MESSAGE value="Creación método toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación método toString" />
   </component>
 </project>
