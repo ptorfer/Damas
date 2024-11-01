@@ -152,4 +152,9 @@ public class Dama {
         Posicion posicionInicial= new Posicion(fila,columna);
         return posicionInicial;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Color [color=%s], Posicion [fila=%s, columna=%s]", this.getColor(), this.getPosicion().getFila(),getPosicion().getColumna());
+    }
 }
