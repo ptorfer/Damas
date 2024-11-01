@@ -60,7 +60,7 @@ public class Consola {
         int d;
         Direccion direccionElegido=Direccion.NORESTE;
         do{
-            System.out.println("Introduzca una direccion: 1.Noreste \n2.Sureste \n3.Suroeste \n4.Noroeste");
+            System.out.println("Introduzca una direccion: \n1.Noreste \n2.Sureste \n3.Suroeste \n4.Noroeste");
             d=Entrada.entero();
         }
         while (!(d>=1 && d<=4));
