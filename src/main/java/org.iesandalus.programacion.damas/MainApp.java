@@ -12,7 +12,12 @@ public class MainApp {
     //Atributo de clase
     private static Dama dama;
 
+    //Métodos
     public static void main(String[] args) {
+    }
+
+    private void ejecutarOpcion(int opcion){
+        Consola.elegirOpcionMenu();
     }
 
 }
