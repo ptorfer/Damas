@@ -60,5 +60,9 @@ public class MainApp {
         }
     }
 
+    private void mostrarDama(){
+        System.out.println(dama.toString());
+    }
+
 
 }
