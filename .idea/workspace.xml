@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="Actualización">
+    <list default="true" id="a4e3f467-dc7a-4445-a2eb-cb690e6b2bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Dama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org.iesandalus.programacion.damas/modelo/Dama.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Documents/Otros/1.DAM/PR/Unidad 2/dados.java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Documents/2DAM/PR/Ejemplos casa/PruebaCasa&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -295,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730459322931</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Creación constructor defecto y con parámetro.">
+      <option name="closed" value="true" />
+      <created>1730468273827</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730468273827</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -315,6 +324,7 @@
     <MESSAGE value="Método toString" />
     <MESSAGE value="Creación atributos en clase Dama" />
     <MESSAGE value="Actualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
+    <MESSAGE value="Creación constructor defecto y con parámetro." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación constructor defecto y con parámetro." />
   </component>
 </project>

@@ -1,9 +1,12 @@
 package org.iesandalus.programacion.damas.modelo;
 
+import javax.naming.OperationNotSupportedException;
+import java.util.Objects;
+
 public class Dama {
 
     //Atributos
-    Boolean esDamaEspecial;
+    Boolean esDamaEspecial=false;
     Color color;
     Posicion posicion;
 
@@ -24,7 +27,12 @@ public class Dama {
     }
 
     public void setColor(Color color) {
-        this.color = color;
+        if (color==Color.BLANCO || color==Color.NEGRO) {
+            this.color = color;
+        }
+        else{
+            throw new IllegalArgumentException("El color no es el esperado.");
+        }
     }
 
     public Posicion getPosicion() {
@@ -32,7 +40,66 @@ public class Dama {
     }
 
     public void setPosicion(Posicion posicion) {
-        this.posicion = posicion;
+        if (posicion==getPosicion()){
+            this.posicion = posicion;
+        }
+        else{
+            throw new IllegalArgumentException("La posición no es la esperada.");
+        }
+    }
+
+    public void Mover (Direccion direccion, int pasos) throws OperationNotSupportedException {
+
+        Objects.requireNonNull(direccion,"ERROR: La dirección no puede ser nula.");
+
+        if (pasos>=1){
+            int nuevaFila= getPosicion().getFila();
+            char nuevaColumna= getPosicion().getColumna();
+
+            if (!(esDamaEspecial)){
+                if(pasos==1) {
+                    if (color == Color.BLANCO) {
+                        if (direccion == Direccion.NORESTE) {
+                            nuevaFila = nuevaFila + pasos;
+                            nuevaColumna = (char) (nuevaColumna + pasos);
+                        }
+                        if (direccion == Direccion.NOROESTE) {
+                            nuevaFila = nuevaFila + pasos;
+                            nuevaColumna = (char) (nuevaColumna - pasos);
+                        }
+                    }
+                    //dama negra
+                    else {
+                        if (direccion == Direccion.SURESTE) {
+                            nuevaFila = nuevaFila - pasos;
+                            nuevaColumna = (char) (nuevaColumna + pasos);
+                        }
+                        if (direccion == Direccion.SUROESTE) {
+                            nuevaFila = nuevaFila - pasos;
+                            nuevaColumna = (char) (nuevaColumna - pasos);
+                        }
+                    }
+                }//Si pasos !=1:
+                else{
+                    throw new OperationNotSupportedException("ERROR: Las damas normales solo se pueden mover 1 casilla.");
+                }
+            }
+            //esDamaEspecial=true y pasos>=1
+            else{
+                if (color==Color.BLANCO) {
+                    nuevaFila=8;
+                }
+                //dama negra:
+                else{
+                    nuevaFila=1;
+                }
+            }
+            Posicion posicion = new Posicion(nuevaFila,nuevaColumna);
+            setPosicion(posicion);
+        }
+        else{
+            throw new OperationNotSupportedException("ERROR: Movimiento no permitido.");
+        }
     }
 
     private Posicion crearPosicionInicial(){
