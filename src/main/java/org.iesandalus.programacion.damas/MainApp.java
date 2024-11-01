@@ -20,6 +20,20 @@ public class MainApp {
 
     //Métodos
     public static void main(String[] args) {
+
+        //Atributo
+        int opcionMenu=0;
+
+        //Llamadas a métodos
+        Consola.mostrarMenu();
+        do{
+            Consola.elegirOpcionMenu();
+        }
+        while (opcionMenu != 4);
+
+        if (opcionMenu == 4){
+            Consola.despedirse();
+        }
     }
 
     private void ejecutarOpcion(int opcion){
