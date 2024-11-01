@@ -20,4 +20,8 @@ public class MainApp {
         Consola.elegirOpcionMenu();
     }
 
+    private void crearDamaDefecto(){
+        dama= new Dama();
+    }
+
 }
