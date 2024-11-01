@@ -7,6 +7,9 @@ https://github.com/jma982/Damas/compare/main...ptorfer:Damas:main
 
 import org.iesandalus.programacion.damas.modelo.Color;
 import org.iesandalus.programacion.damas.modelo.Dama;
+import org.iesandalus.programacion.damas.modelo.Direccion;
+
+import javax.naming.OperationNotSupportedException;
 
 public class MainApp {
 
@@ -31,5 +34,25 @@ public class MainApp {
         color=Consola.elegirColor();
         dama=new Dama(color);
     }
+
+    private void mover(){
+
+        //Atributos
+        Direccion direccion;
+        int pasos;
+
+        //Llamada a métodos
+        try{
+        Consola.mostrarMenuDirecciones();
+        direccion=Consola.elegirDireccion();
+        pasos=Consola.elegirPasos();
+        dama.mover(direccion, pasos);
+        }
+        catch (OperationNotSupportedException e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
 
 }

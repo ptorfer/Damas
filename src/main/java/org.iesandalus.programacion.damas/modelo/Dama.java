@@ -48,7 +48,7 @@ public class Dama {
         }
     }
 
-    public void Mover (Direccion direccion, int pasos) throws OperationNotSupportedException {
+    public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException {
 
         Objects.requireNonNull(direccion,"ERROR: La dirección no puede ser nula.");
 
