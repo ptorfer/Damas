@@ -37,7 +37,21 @@ public class MainApp {
     }
 
     private void ejecutarOpcion(int opcion){
-        Consola.elegirOpcionMenu();
+        switch (opcion){
+            case 1:
+                crearDamaDefecto();
+                break;
+            case 2:
+                crearDamaColor();
+                break;
+            case 3:
+                mover();
+                break;
+            case 4:
+                Consola.despedirse();
+                break;
+            default: ;
+        }
     }
 
     private void crearDamaDefecto(){
@@ -80,10 +94,6 @@ public class MainApp {
         Objects.requireNonNull(dama,"La dama no ha sido creada.");
         System.out.println(dama.toString());
     }
-
-
-
-
-
-
 }
+
+
