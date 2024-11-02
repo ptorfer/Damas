@@ -1,4 +1,4 @@
-/*
+
 
 package org.iesalandalus.programacion.damas.modelo;
 
@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.iesandalus.programacion.damas.modelo.Posicion;
 import org.junit.jupiter.api.Test;
 
 class PosicionTest {
@@ -100,4 +101,3 @@ class PosicionTest {
 }
 
 
- */

@@ -1,9 +1,10 @@
-/*
+
 
 package org.iesalandalus.programacion.damas.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.iesandalus.programacion.damas.modelo.Direccion;
 import org.junit.jupiter.api.Test;
 
 
@@ -21,4 +22,4 @@ class DireccionTest {
 
 }
 
-*/
+

@@ -17,6 +17,7 @@ public class Dama {
     }
 
     public Dama(Color color) {
+        Objects.requireNonNull(color,"ERROR: El color no puede ser nulo.");
         this.color=color;
         this.posicion=crearPosicionInicial();
     }
@@ -26,12 +27,12 @@ public class Dama {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(Color color) throws OperationNotSupportedException {
         if (color==Color.BLANCO || color==Color.NEGRO) {
             this.color = color;
         }
         else{
-            throw new IllegalArgumentException("El color no es el esperado.");
+            throw new OperationNotSupportedException("El color no es el esperado.");
         }
     }
 
@@ -40,71 +41,81 @@ public class Dama {
     }
 
     public void setPosicion(Posicion posicion) {
-        if (posicion==getPosicion()){
-            this.posicion = posicion;
-        }
-        else{
-            throw new IllegalArgumentException("La posición no es la esperada.");
-        }
+        this.posicion = Objects.requireNonNull(posicion,"La posición no puede ser nula.");
     }
 
     public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException {
 
-        Objects.requireNonNull(direccion,"ERROR: La dirección no puede ser nula.");
+        Objects.requireNonNull(direccion, "ERROR: La dirección no puede ser nula.");
+        int nuevaFila = getPosicion().getFila();
+        char nuevaColumna = getPosicion().getColumna();
 
-        if (pasos>=1){
-            int nuevaFila= getPosicion().getFila();
-            char nuevaColumna= getPosicion().getColumna();
-
-            if (!(esDamaEspecial)){
-                if(pasos==1) {
-                    if (color == Color.BLANCO) {
-                        if (direccion == Direccion.NORESTE) {
-                            nuevaFila = nuevaFila + pasos;
-                            nuevaColumna = (char) (nuevaColumna + pasos);
-                        }
-                        if (direccion == Direccion.NOROESTE) {
-                            nuevaFila = nuevaFila + pasos;
-                            nuevaColumna = (char) (nuevaColumna - pasos);
-                        }
-                    }
-                    //dama negra
-                    else {
-                        if (direccion == Direccion.SURESTE) {
-                            nuevaFila = nuevaFila - pasos;
-                            nuevaColumna = (char) (nuevaColumna + pasos);
-                        }
-                        if (direccion == Direccion.SUROESTE) {
-                            nuevaFila = nuevaFila - pasos;
-                            nuevaColumna = (char) (nuevaColumna - pasos);
-                        }
-                    }
-                }//Si pasos !=1:
-                else{
-                    throw new OperationNotSupportedException("ERROR: Las damas normales solo se pueden mover 1 casilla.");
+        if ((nuevaFila == 8 && getColor() == Color.BLANCO) || (nuevaFila == 1 && getColor() == Color.NEGRO) || (esDamaEspecial)) {
+            esDamaEspecial = true;
+            if (pasos >= 1) {
+                if (direccion == Direccion.NORESTE) {
+                    nuevaFila = nuevaFila + pasos;
+                    nuevaColumna = (char) (nuevaColumna + pasos);
                 }
+                if (direccion == Direccion.NOROESTE) {
+                    nuevaFila = nuevaFila + pasos;
+                    nuevaColumna = (char) (nuevaColumna - pasos);
+                }
+                if (direccion == Direccion.SURESTE) {
+                    nuevaFila = nuevaFila - pasos;
+                    nuevaColumna = (char) (nuevaColumna + pasos);
+                }
+                if (direccion == Direccion.SUROESTE) {
+                    nuevaFila = nuevaFila - pasos;
+                    nuevaColumna = (char) (nuevaColumna - pasos);
+                }
+            } else {
+                throw new OperationNotSupportedException("ERROR: Movimiento no permitido.");
             }
-            //esDamaEspecial=true y pasos>=1
-            else{
-                if (color==Color.BLANCO) {
-                    nuevaFila=8;
+        } else {
+            if (pasos == 1) {
+                if (color == Color.BLANCO) {
+                    if (direccion == Direccion.NORESTE) {
+                        nuevaFila = nuevaFila + pasos;
+                        nuevaColumna = (char) (nuevaColumna + pasos);
+                    }
+                    else if (direccion == Direccion.NOROESTE) {
+                        nuevaFila = nuevaFila + pasos;
+                        nuevaColumna = (char) (nuevaColumna - pasos);
+                    }
+                    else{
+                        throw new OperationNotSupportedException("ERROR: Movimiento no permitido.");
+                    }
                 }
-                //dama negra:
-                else{
-                    nuevaFila=1;
+                //Dama negra:
+                else {
+                    if (direccion == Direccion.SURESTE) {
+                        nuevaFila = nuevaFila - pasos;
+                        nuevaColumna = (char) (nuevaColumna + pasos);
+                    }
+                    else if (direccion == Direccion.SUROESTE) {
+                        nuevaFila = nuevaFila - pasos;
+                        nuevaColumna = (char) (nuevaColumna - pasos);
+                    }
+                    else{
+                        throw new OperationNotSupportedException("ERROR: Movimiento no permitido.");
+                    }
                 }
+            } else {
+                throw new OperationNotSupportedException("ERROR: Las damas normales solo se pueden mover 1 casilla.");
             }
-            Posicion posicion = new Posicion(nuevaFila,nuevaColumna);
-            setPosicion(posicion);
         }
-        else{
-            throw new OperationNotSupportedException("ERROR: Movimiento no permitido.");
+        try {
+            Posicion posicion = new Posicion(nuevaFila, nuevaColumna);
+            setPosicion(posicion);
+        } catch (IllegalArgumentException e) {
+            throw new OperationNotSupportedException(e.getMessage());
         }
     }
 
     private Posicion crearPosicionInicial(){
         //Calculo posición inicial dama blanca de la fila
-        int fila=0;
+        int fila=1;
         if (getColor()== Color.BLANCO) {
             double aleatorio = Math.random();
             fila = (int) (aleatorio * 3) + 1;
@@ -116,35 +127,39 @@ public class Dama {
             fila = (int) (aleatorio * 3) + 6;
         }
 
-        //Calculo posición inicial de columna (es la misma para dama negra y blanca)
+        //Calculo posición inicial dama blanca de columna
         double aleatorio = Math.random();
-        int c = (int) (aleatorio * 8) + 1;
+        int c = (int) (aleatorio * 4) + 1;
+        char columna='a';
 
-        char columna = 'a';
-        switch (c) {
-            case 1:
-                columna = 'a';
+        switch (fila) {
+            case 1,3,7:
+                if(c==1) {
+                    columna = 'a';
+                }
+                else if(c==2){
+                    columna = 'c';
+                }
+                else if(c==3){
+                    columna = 'e';
+                }
+                else{
+                    columna = 'g';
+                }
                 break;
-            case 2:
-                columna = 'b';
-                break;
-            case 3:
-                columna = 'c';
-                break;
-            case 4:
-                columna = 'd';
-                break;
-            case 5:
-                columna = 'e';
-                break;
-            case 6:
-                columna = 'f';
-                break;
-            case 7:
-                columna = 'g';
-                break;
-            case 8:
-                columna = 'h';
+            case 2,6,8:
+                if(c==1) {
+                    columna = 'b';
+                }
+                else if(c==2){
+                    columna = 'd';
+                }
+                else if(c==3){
+                    columna = 'f';
+                }
+                else{
+                    columna = 'h';
+                }
                 break;
             default: ;
         }
@@ -155,6 +170,6 @@ public class Dama {
 
     @Override
     public String toString() {
-        return String.format("Color [color=%s], Posicion [fila=%s, columna=%s]", this.getColor(), this.getPosicion().getFila(),getPosicion().getColumna());
+        return String.format("color=%s, posicion=(fila=%s, columna=%s)", this.getColor(), this.getPosicion().getFila(),getPosicion().getColumna());
     }
 }

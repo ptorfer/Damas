@@ -1,4 +1,4 @@
-/*
+
 
 package org.iesalandalus.programacion.damas.modelo;
 
@@ -124,4 +124,4 @@ class DamaTest {
 }
 
 
-*/
+

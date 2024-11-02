@@ -18,23 +18,24 @@ public class Consola {
     }
 
     public static int elegirOpcionMenu(){
-        int opcionMenu;
+        int opcion;
         do{
             System.out.println("Introduzca una opción del menú.");
-            opcionMenu= Entrada.entero();
+            opcion= Entrada.entero();
         }
-        while (!(opcionMenu>=1 && opcionMenu<=4));
-        return  opcionMenu;
+        while (!(opcion>=1 && opcion<=4));
+        return  opcion;
     }
 
     public static Color elegirColor(){
         int color;
-        Color colorElegido=Color.BLANCO;
+        Color colorElegido;
         do{
-            System.out.println("Introduzca un color: \n1.Blanco\2.Negro");
+            System.out.println("Introduzca un color: \n1.Blanco\n2.Negro");
             color=Entrada.entero();
+            System.out.println(!(color==1 || color==2));
         }
-        while (color!=1 && color!=2);
+        while (!(color==1 || color==2));
 
         if (color==1){
             colorElegido=Color.BLANCO;
@@ -42,7 +43,7 @@ public class Consola {
         else{
             colorElegido=Color.NEGRO;
         }
-    return colorElegido;
+        return colorElegido;
     }
 
     public static void mostrarMenuDirecciones(){
@@ -66,7 +67,7 @@ public class Consola {
         int d;
         Direccion direccionElegido=Direccion.NORESTE;
         do{
-            System.out.println("Introduzca una direccion: \n1.Noreste \n2.Sureste \n3.Suroeste \n4.Noroeste");
+            mostrarMenuDirecciones();
             d=Entrada.entero();
         }
         while (!(d>=1 && d<=4));
